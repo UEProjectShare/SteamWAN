@@ -22,4 +22,14 @@ class STEAMWAN_API ISessionMenuInterface
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+
+
+	virtual void Host(FString ServerName) = 0;
+
+	virtual void JoinSession(uint32 Index) = 0;
+
+	virtual void EndSession() = 0;
+
+	virtual void OpenSessionListMenu() = 0;
+public:
 };

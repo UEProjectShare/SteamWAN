@@ -33,7 +33,7 @@ class STEAMWAN_API UMainMenu : public UUserWidget
 	
 public:
 
-	void Setup(ISessionMenuInterface* SessionMenuInterface);
+	void Setup(ISessionMenuInterface* MenuInterface);
 
 	void Teardown();
 

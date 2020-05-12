@@ -7,7 +7,6 @@
 #include "Components/WidgetSwitcher.h"
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
-#include "../SteamWANPlayerController.h"
 
 void UMainMenu::Setup(ISessionMenuInterface* MenuInterface)
 {
@@ -18,7 +17,7 @@ void UMainMenu::Setup(ISessionMenuInterface* MenuInterface)
 	UWorld* World = GetWorld();
 	if (World == nullptr) return;
 
-	ASteamWANPlayerController* PlayerController = Cast<ASteamWANPlayerController>(World->GetFirstPlayerController());
+	APlayerController* PlayerController = World->GetFirstPlayerController();
 	if (PlayerController == nullptr)
 	{
 		return;
@@ -40,7 +39,7 @@ void UMainMenu::Teardown()
 	UWorld* World = GetWorld();
 	if (World == nullptr) return;
 
-	ASteamWANPlayerController* PlayerController = Cast<ASteamWANPlayerController>(World->GetFirstPlayerController());
+	APlayerController* PlayerController = World->GetFirstPlayerController();
 	if (PlayerController == nullptr) return;
 
 	// Set the Input Mode for game mode: allows only the player input / player controller to respond to user input.
